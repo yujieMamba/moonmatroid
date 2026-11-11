@@ -1,0 +1,6 @@
+import {
+  "yujieMamba/moonmatroid" @matroid,
+  "moonbitlang/core/debug",
+}
+
+pkgtype(kind: "executable")
