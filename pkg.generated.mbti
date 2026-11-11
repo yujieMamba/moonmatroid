@@ -2,6 +2,8 @@
 package "yujieMamba/moonmatroid"
 
 // Values
+pub fn decode_snapshot(String) -> Matroid raise MatroidError
+
 pub fn intersect(Matroid, Matroid, max_calls? : Int32) -> Intersection raise MatroidError
 
 pub fn union_partition(Array[Matroid], max_calls? : Int32) -> UnionSelection raise MatroidError
@@ -45,6 +47,7 @@ pub fn Matroid::contract(Self, Array[Int32]) -> Self raise MatroidError
 pub fn Matroid::delete(Self, Array[Int32]) -> Self raise MatroidError
 pub fn Matroid::direct_sum(Self, Self) -> Self raise MatroidError
 pub fn Matroid::dual(Self) -> Self
+pub fn Matroid::encode(Self) -> String raise MatroidError
 pub fn Matroid::flats(Self, max_subsets? : Int32) -> Array[Array[Int32]] raise MatroidError
 pub fn Matroid::free(Int32) -> Self raise MatroidError
 pub fn Matroid::free_extension(Self) -> Self raise MatroidError
