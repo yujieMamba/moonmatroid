@@ -4,6 +4,8 @@ package "yujieMamba/moonmatroid"
 // Values
 pub fn intersect(Matroid, Matroid, max_calls? : Int32) -> Intersection raise MatroidError
 
+pub fn union_partition(Array[Matroid], max_calls? : Int32) -> UnionSelection raise MatroidError
+
 pub fn verify_intersection(Matroid, Matroid, Intersection) -> Unit raise MatroidError
 
 pub fn verify_partition(Array[Matroid], Array[Array[Int32]], Array[Int32]) -> Unit raise MatroidError
@@ -77,6 +79,12 @@ pub(all) struct Selection {
   elements : Array[Int32]
   weight : Int64
   rank : Int32
+}
+
+pub(all) struct UnionSelection {
+  elements : Array[Int32]
+  groups : Array[Array[Int32]]
+  proof : Intersection
 }
 
 // Type aliases
