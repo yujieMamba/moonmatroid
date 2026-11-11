@@ -1,0 +1,12 @@
+{
+  "seed": 20261111,
+  "models": 48,
+  "subset_rank_comparisons": 3072,
+  "all_three_element_matroids": 16,
+  "small_intersection_pairs": 256,
+  "mixed_intersection_pairs": 128,
+  "union_pairs": 24,
+  "weighted_optima": 144,
+  "dual_tutte_grid_comparisons": 768,
+  "method": "exhaustive feasible subsets, injective assignments, XOR spans; exhaustive common-independent and copy-assignment optima"
+}
