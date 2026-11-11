@@ -21,12 +21,12 @@ MoonMatroid 是纯 MoonBit 的有限拟阵建模与组合选择库。将“每�
 在新的空目录创建消费者项目：
 
 ```sh
-moon new selection-demo
+moon new selection-demo --user demo --name selection-demo
 cd selection-demo
 moon add yujieMamba/moonmatroid@0.1.0
 ```
 
-将 `src/main/moon.pkg` 设置为：
+将 `cmd/main/moon.pkg` 设置为：
 
 ```moonbit
 import {
@@ -36,7 +36,7 @@ import {
 pkgtype(kind: "executable")
 ```
 
-将 `src/main/main.mbt` 设置为：
+将 `cmd/main/main.mbt` 设置为：
 
 ```moonbit
 ///|
@@ -52,7 +52,7 @@ fn main {
 
 ```sh
 moon check --target js --deny-warn
-moon run src/main --target js --deny-warn
+moon run cmd/main --target js --deny-warn
 ```
 
 预期输出：
