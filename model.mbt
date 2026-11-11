@@ -1,6 +1,7 @@
 ///|
 pub suberror MatroidError {
   InvalidInput(String)
+  InvalidCertificate(String)
   BudgetExceeded(String)
 }
 

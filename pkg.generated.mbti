@@ -4,9 +4,14 @@ package "yujieMamba/moonmatroid"
 // Values
 pub fn intersect(Matroid, Matroid, max_calls? : Int32) -> Intersection raise MatroidError
 
+pub fn verify_intersection(Matroid, Matroid, Intersection) -> Unit raise MatroidError
+
+pub fn verify_partition(Array[Matroid], Array[Array[Int32]], Array[Int32]) -> Unit raise MatroidError
+
 // Errors
 pub suberror MatroidError {
   InvalidInput(String)
+  InvalidCertificate(String)
   BudgetExceeded(String)
 }
 
