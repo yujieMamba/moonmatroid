@@ -1,0 +1,30 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "yujieMamba/moonmatroid"
+
+// Values
+
+// Errors
+pub suberror MatroidError {
+  InvalidInput(String)
+}
+
+// Types and methods
+pub struct Matroid {
+  size : Int32
+  model : String
+  evaluate : (Array[Int32]) -> Int32
+}
+pub fn Matroid::free(Int32) -> Self raise MatroidError
+pub fn Matroid::full_rank(Self) -> Int32
+pub fn Matroid::ground(Self) -> Array[Int32]
+pub fn Matroid::ground_size(Self) -> Int32
+pub fn Matroid::independent(Self, Array[Int32]) -> Bool raise MatroidError
+pub fn Matroid::kind(Self) -> String
+pub fn Matroid::nullity(Self, Array[Int32]) -> Int32 raise MatroidError
+pub fn Matroid::rank(Self, Array[Int32]) -> Int32 raise MatroidError
+pub fn Matroid::uniform(Int32, Int32) -> Self raise MatroidError
+pub fn Matroid::zero(Int32) -> Self raise MatroidError
+
+// Type aliases
+
+// Traits
