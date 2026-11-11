@@ -16,6 +16,7 @@ pub struct Matroid {
 }
 pub fn Matroid::free(Int32) -> Self raise MatroidError
 pub fn Matroid::full_rank(Self) -> Int32
+pub fn Matroid::graphic(Int32, Array[(Int32, Int32)]) -> Self raise MatroidError
 pub fn Matroid::ground(Self) -> Array[Int32]
 pub fn Matroid::ground_size(Self) -> Int32
 pub fn Matroid::independent(Self, Array[Int32]) -> Bool raise MatroidError
