@@ -2,13 +2,24 @@
 package "yujieMamba/moonmatroid"
 
 // Values
+pub fn intersect(Matroid, Matroid, max_calls? : Int32) -> Intersection raise MatroidError
 
 // Errors
 pub suberror MatroidError {
   InvalidInput(String)
+  BudgetExceeded(String)
 }
 
 // Types and methods
+pub(all) struct Intersection {
+  elements : Array[Int32]
+  certificate : Array[Int32]
+  left_rank : Int32
+  right_rank : Int32
+  oracle_calls : Int32
+  augmentations : Int32
+}
+
 pub struct Matroid {
   size : Int32
   model : String
