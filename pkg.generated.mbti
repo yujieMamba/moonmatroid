@@ -34,8 +34,10 @@ pub struct Matroid {
 }
 pub fn Matroid::add_coloop(Self) -> Self raise MatroidError
 pub fn Matroid::add_loop(Self) -> Self raise MatroidError
+pub fn Matroid::bases(Self, max_subsets? : Int32) -> Array[Array[Int32]] raise MatroidError
 pub fn Matroid::basis(Self, Array[Int32]) -> Array[Int32] raise MatroidError
 pub fn Matroid::binary(Int32, Array[UInt64]) -> Self raise MatroidError
+pub fn Matroid::circuits(Self, max_subsets? : Int32) -> Array[Array[Int32]] raise MatroidError
 pub fn Matroid::closure(Self, Array[Int32]) -> Array[Int32] raise MatroidError
 pub fn Matroid::coloops(Self) -> Array[Int32]
 pub fn Matroid::connectivity(Self, Array[Int32]) -> Int32 raise MatroidError
@@ -43,6 +45,7 @@ pub fn Matroid::contract(Self, Array[Int32]) -> Self raise MatroidError
 pub fn Matroid::delete(Self, Array[Int32]) -> Self raise MatroidError
 pub fn Matroid::direct_sum(Self, Self) -> Self raise MatroidError
 pub fn Matroid::dual(Self) -> Self
+pub fn Matroid::flats(Self, max_subsets? : Int32) -> Array[Array[Int32]] raise MatroidError
 pub fn Matroid::free(Int32) -> Self raise MatroidError
 pub fn Matroid::free_extension(Self) -> Self raise MatroidError
 pub fn Matroid::from_ranks(Int32, Array[Int32]) -> Self raise MatroidError
@@ -64,6 +67,7 @@ pub fn Matroid::nullity(Self, Array[Int32]) -> Int32 raise MatroidError
 pub fn Matroid::parallel_extension(Self, Int32) -> Self raise MatroidError
 pub fn Matroid::partition(Array[Int32], Array[Int32]) -> Self raise MatroidError
 pub fn Matroid::rank(Self, Array[Int32]) -> Int32 raise MatroidError
+pub fn Matroid::rank_distribution(Self, max_subsets? : Int32) -> Array[Array[Int64]] raise MatroidError
 pub fn Matroid::rank_snapshot(Self) -> Array[Int32] raise MatroidError
 pub fn Matroid::relabel(Self, Array[Int32]) -> Self raise MatroidError
 pub fn Matroid::restrict_to(Self, Array[Int32]) -> Self raise MatroidError
