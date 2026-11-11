@@ -42,6 +42,8 @@ pub fn Matroid::binary(Int32, Array[UInt64]) -> Self raise MatroidError
 pub fn Matroid::circuits(Self, max_subsets? : Int32) -> Array[Array[Int32]] raise MatroidError
 pub fn Matroid::closure(Self, Array[Int32]) -> Array[Int32] raise MatroidError
 pub fn Matroid::coloops(Self) -> Array[Int32]
+pub fn Matroid::component_factors(Self) -> Array[(Array[Int32], Self)] raise MatroidError
+pub fn Matroid::components(Self) -> Array[Array[Int32]] raise MatroidError
 pub fn Matroid::connectivity(Self, Array[Int32]) -> Int32 raise MatroidError
 pub fn Matroid::contract(Self, Array[Int32]) -> Self raise MatroidError
 pub fn Matroid::delete(Self, Array[Int32]) -> Self raise MatroidError
@@ -61,12 +63,15 @@ pub fn Matroid::ground_size(Self) -> Int32
 pub fn Matroid::independent(Self, Array[Int32]) -> Bool raise MatroidError
 pub fn Matroid::is_basis(Self, Array[Int32]) -> Bool raise MatroidError
 pub fn Matroid::is_circuit(Self, Array[Int32]) -> Bool raise MatroidError
+pub fn Matroid::is_connected(Self) -> Bool raise MatroidError
 pub fn Matroid::is_flat(Self, Array[Int32]) -> Bool raise MatroidError
+pub fn Matroid::is_simple(Self) -> Bool
 pub fn Matroid::kind(Self) -> String
 pub fn Matroid::laminar(Int32, Array[Array[Int32]], Array[Int32]) -> Self raise MatroidError
 pub fn Matroid::loops(Self) -> Array[Int32]
 pub fn Matroid::max_weight_independent(Self, Array[Int32]) -> Selection raise MatroidError
 pub fn Matroid::nullity(Self, Array[Int32]) -> Int32 raise MatroidError
+pub fn Matroid::parallel_classes(Self) -> Array[Array[Int32]]
 pub fn Matroid::parallel_extension(Self, Int32) -> Self raise MatroidError
 pub fn Matroid::partition(Array[Int32], Array[Int32]) -> Self raise MatroidError
 pub fn Matroid::rank(Self, Array[Int32]) -> Int32 raise MatroidError
@@ -75,6 +80,7 @@ pub fn Matroid::rank_snapshot(Self) -> Array[Int32] raise MatroidError
 pub fn Matroid::relabel(Self, Array[Int32]) -> Self raise MatroidError
 pub fn Matroid::restrict_to(Self, Array[Int32]) -> Self raise MatroidError
 pub fn Matroid::series_extension(Self, Int32) -> Self raise MatroidError
+pub fn Matroid::simplify(Self) -> Simplification raise MatroidError
 pub fn Matroid::spans(Self, Array[Int32]) -> Bool raise MatroidError
 pub fn Matroid::transversal(Int32, Array[Array[Int32]]) -> Self raise MatroidError
 pub fn Matroid::truncate(Self, Int32) -> Self raise MatroidError
@@ -88,6 +94,13 @@ pub(all) struct Selection {
   elements : Array[Int32]
   weight : Int64
   rank : Int32
+}
+
+pub(all) struct Simplification {
+  matroid : Matroid
+  representatives : Array[Int32]
+  classes : Array[Array[Int32]]
+  removed_loops : Array[Int32]
 }
 
 pub(all) struct TutteTerm {
