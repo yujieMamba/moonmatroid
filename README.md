@@ -2,7 +2,7 @@
 
 MoonMatroid 是纯 MoonBit 的有限拟阵建模与组合选择库。将“每组最多选几个”“边集不能成环”“二进制特征必须线性独立”等约束表示为秩函数，可以查询结构、做最优加权选择，或在两个约束系统间寻找最大共同独立集，并检查其最优性证书。
 
-模块：`yujieMamba/moonmatroid@0.1.0`。许可证：MIT。运行时仅使用 MoonBit 核心类型，不依赖外部求解器或网络。
+模块：`yujieMamba/moonmatroid@0.1.1`。许可证：MIT。运行时仅使用 MoonBit 核心类型，不依赖外部求解器或网络。
 
 ## 用途与完整工作流
 
@@ -23,7 +23,7 @@ MoonMatroid 是纯 MoonBit 的有限拟阵建模与组合选择库。将“每�
 ```sh
 moon new selection-demo --user demo --name selection-demo
 cd selection-demo
-moon add yujieMamba/moonmatroid@0.1.0
+moon add yujieMamba/moonmatroid@0.1.1
 ```
 
 将 `cmd/main/moon.pkg` 设置为：
@@ -124,7 +124,7 @@ moon run examples/features --target js --deny-warn
 
 22 个命名测试块包含固定边界用例及独立 oracle：48 个模型 × 64 子集秩、144 个加权最优值、全部 16 个三元素拟阵的 256 对求交、128 对混合模型求交、24 对并集穷举、768 个对偶 Tutte 网格关系。它们是实测用例数量，不是代码覆盖率。没有宣称 100% 分支覆盖。
 
-独立 oracle 仅使用 Python 标准库，采用可行子集、注入匹配和 XOR 闭包穷举生成答案，而非调用 MoonMatroid：
+独立 oracle 仅使用 Python 3.8+ 标准库，采用可行子集、注入匹配和 XOR 闭包穷举生成答案，而非调用 MoonMatroid：
 
 ```sh
 python tools/oracle.py
