@@ -16,7 +16,7 @@ MoonMatroid 是纯 MoonBit 的有限拟阵建模与组合选择库。将“每�
 
 ## 安装与快速开始
 
-开发和 CI 固定使用 **moonc v0.10.18+6c83a7f62**（高于验收要求的 0.10.16），对应 MoonBit 官方工具链。先按 [MoonBit 安装文档](https://docs.moonbitlang.com/en/latest/installation.html) 安装，再执行 `moon version --all` 和 `moonc -v`。支持 `js`、`wasm`、`wasm-gc` 和 Linux `native`；JS 示例需要 Node.js，Linux native 需要 C 编译器。Windows 本机验证范围另见验收记录。
+开发和 CI 固定使用 **moonc v0.10.22+124d61d05**，对应 `moon` / `moonrun 0.1.20261119`。CI 会对这三个组件执行精确版本门禁。MoonCakes 页面公开构建状态，但不公开服务端工具链版本；因此此版本号表示本项目 CI 与本地验证工具链，不代表服务端实测版本。先按 [MoonBit 安装文档](https://docs.moonbitlang.com/en/latest/installation.html) 安装，再执行 `moon version --all` 和 `moonc -v` 核对。支持 `js`、`wasm`、`wasm-gc` 和 Linux `native`；JS 示例需要 Node.js，Linux native 需要 C 编译器。Windows 本机验证范围另见验收记录。
 
 在新的空目录创建消费者项目：
 
