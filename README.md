@@ -2,7 +2,7 @@
 
 MoonMatroid 是纯 MoonBit 的有限拟阵建模与组合选择库。将“每组最多选几个”“边集不能成环”“二进制特征必须线性独立”等约束表示为秩函数，可以查询结构、做最优加权选择，或在两个约束系统间寻找最大共同独立集，并检查其最优性证书。
 
-模块：`yujieMamba/moonmatroid@0.1.1`。许可证：MIT。运行时仅使用 MoonBit 核心类型，不依赖外部求解器或网络。
+模块：`yujieMamba/moonmatroid@0.1.3`。许可证：MIT。运行时仅使用 MoonBit 核心类型，不依赖外部求解器或网络。
 
 ## 用途与完整工作流
 
@@ -23,7 +23,7 @@ MoonMatroid 是纯 MoonBit 的有限拟阵建模与组合选择库。将“每�
 ```sh
 moon new selection-demo --user demo --name selection-demo
 cd selection-demo
-moon add yujieMamba/moonmatroid@0.1.1
+moon add yujieMamba/moonmatroid@0.1.3
 ```
 
 将 `cmd/main/moon.pkg` 设置为：
